@@ -1,0 +1,21 @@
+[Banderas]
+P:_
+
+[Inicio]
+Eres un estudiante de universidad y vas tarde a la escuela. Puedes tomar tres caminos para llegar: El subterráneo, que va mucha gente pero es rápido; el autobús, que puede irte mal dependiendo del tráfico y a pie.
+[]Irte por subterráneo[]:Subte
+[]Irte por autobús[]:Bus
+[]Irte caminando[]:Caminar
+[]Irte corriendo[]:Correr
+[]Quedarte en casa[]:Casa
+
+[Subte]
+aaa
+[]a[]:
+
+[Casa]
+Decidiste quedarte en casa. Después de regresar a la cama recordaste que tienes un examen pendiente. Te odias a ti mismo. Sales corriendo.
+[]Texto[]:Fin
+
+[Fin]
+Fin del juego

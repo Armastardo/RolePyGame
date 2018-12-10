@@ -5,9 +5,14 @@ from os import system, name
 def cumplenRequerimentos(banderas, opcion):
 	for requerimento in opcion.requerimentos:
 		if requerimento:
-			if not banderas[requerimento].estado:
-				return False
-	return True
+			if requerimento[0] == "-":
+				if not banderas[requerimento[1:]].estado:
+					return True
+			elif banderas[requerimento].estado:
+				return True
+		else:
+			return True
+	return False
 
 def leerOpcion():
 	try:

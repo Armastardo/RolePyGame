@@ -4,11 +4,12 @@ Otra:Una_Dos_0
 
 [Inicio]
 Te encuentras en un cuarto oscuro
-[]Encender la luz[Fin]Click:CuartoFinal
+[]Encender la luz[]Click:CuartoFinal
 
 [CuartoFinal]
 Has llegado al final
 [Fin]Bien[]:Fin
+[-Fin]Mal[]:Fin
 
 [Fin]
 Felicidades
