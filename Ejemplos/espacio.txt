@@ -1,5 +1,5 @@
 [Banderas]
-Ham:Pedirle que traiga una hamburguesa_
+Ham:_Eh... claro... Supongo...
 HamPed:_Aquí tiene su hamburguesa
 
 [Inicio]
@@ -25,14 +25,15 @@ Colgué el teléfono y me puse a ver al horizonte.
 
 [Estación]
 ¡Bienvenido de regreso, ingeniero! El capitán Tim está ahora mismo en la biblioteca.
-[]Hola, gracias por recibirme[]:Diag
-[Ham]¿Puedes traerme una hamburguesa?[Ham,HamPed]:Diag
+[]Hola, gracias por recibirme. Ahora voy con él[]:DiagTim
+[Ham]¿Puedes traerme una hamburguesa?[HamPed]:PedHam
+
+[PedHam]
+{Ham}
+Sígame entonces, ingeniero.
+[]Al final del juego[]:Fin
 
 [Diag]
-{HamPed}
-Ok...
-[Ham]No lo creo...[]:Fin
-[]Ya...[]:Fin
 
 [Fin]
 Fin del juego
