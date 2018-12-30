@@ -1,4 +1,5 @@
 import textParser
+import textwrap
 from gameClasses import Bandera, Habitacion, Opcion
 from os import system, name
 
@@ -33,11 +34,16 @@ def jugar(ruta):
 		
 		habActual = habitaciones["Inicio"] 
 
+		w = textwrap.TextWrapper(replace_whitespace=False)
+
 		while True:
-			print(habActual.dialogo)
+			print("="*30)
+			print(w.fill(habActual.dialogo))
+			#print(habActual.dialogo)
 
 			opc = 0
 			disponibles = []
+			print("")
 			for opcion in habActual.opciones:
 				if cumplenRequerimentos(banderas, opcion):
 					disponibles.append(opcion)

@@ -53,8 +53,15 @@ def leerArchivo(ruta):
 		while i<(len(data)):
 			key = data[i][1:-1]
 			i += 1
-			dialog = data[i]
-			i += 1
+
+			diagAux = []
+
+			while(data[i][0] != '['):
+				diagAux.append(data[i])
+				i += 1
+
+			dialog = '\n'.join(diagAux)
+			
 			opciones = []
 			try:
 				while data[i]:

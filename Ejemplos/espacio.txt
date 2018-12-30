@@ -1,0 +1,36 @@
+[Banderas]
+Ham:Pedirle que traiga una hamburguesa_
+
+[Inicio]
+Perdidos en el espacio
+[]Empezar[]:Introducción
+
+[Introducción]
+El espacio es aterrador. En el espacio, no hay nada que te detenga. Si sales de tu nave y recibes el más mínimo empujón tu cuerpo puedes terminar vagando hasta la deriva gracias a la falta de resistencia. Aún así, alguien tiene que hacer este trabajo. El mantenimiento de los satélites es mucho más importante que seguir sacando más y más a la órbita. Mi nombre es Quark y estoy encargado del mantenimiento de los 35 satélites que operan en la tierra. Llevo casi 40 horas seguidas en el espacio y ya empiezo a extrañar la tierra firme, lo mejor será que baje y reporte las reparaciones que he hecho hasta el momento.
+[]Bajar a la tierra[]:Módulo
+
+[Módulo]
+El viaje de regreso es bastante sencillo. Desmonté el módulo en el que llegué al satélite y encendí el piloto automático para que calculara y efectuara la ruta que me llevaría de regreso a la estación espacial número 4. Le daría instrucciones a mi equipo y así yo podría descansar un día o dos. Apenas empezaba a relajarme recibí una llamada.
+[]Contestar el teléfono[]:Llamada
+
+[Llamada]
+- ¡Buen día, ingeniero Quark! Regresa en el mejor momento. El capitán Tim lo está esperando.
+- ¿El capitán Tim?
+- Sí. Apenas íbamos a llamarle.
+- Bueno, entonces lo veo en unos minutos.
+Colgué el teléfonoy me puse a ver al horizonte.
+[]- ¿Qué es lo que querrá el Capitán Tim?[]:Estación
+[]- Tengo ganas de comerme una hamburguesa...[Ham]:Estación
+
+[Estación]
+¡Bienvenido, capitán!
+[Ham]¿Puedes traerme una hamburguesa?[]:Diag
+[]Hola[]:Diag
+
+[Diag]
+Ok...
+[][]:Fin
+
+[Fin]
+Fin del juego
+[][]:
