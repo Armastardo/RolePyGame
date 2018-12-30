@@ -1,5 +1,6 @@
 [Banderas]
 Ham:Pedirle que traiga una hamburguesa_
+HamPed:_Aquí tiene su hamburguesa
 
 [Inicio]
 Perdidos en el espacio
@@ -18,18 +19,20 @@ El viaje de regreso es bastante sencillo. Desmonté el módulo en el que llegué
 - ¿El capitán Tim?
 - Sí. Apenas íbamos a llamarle.
 - Bueno, entonces lo veo en unos minutos.
-Colgué el teléfonoy me puse a ver al horizonte.
+Colgué el teléfono y me puse a ver al horizonte.
 []- ¿Qué es lo que querrá el Capitán Tim?[]:Estación
 []- Tengo ganas de comerme una hamburguesa...[Ham]:Estación
 
 [Estación]
-¡Bienvenido, capitán!
-[Ham]¿Puedes traerme una hamburguesa?[]:Diag
-[]Hola[]:Diag
+¡Bienvenido de regreso, ingeniero! El capitán Tim está ahora mismo en la biblioteca.
+[]Hola, gracias por recibirme[]:Diag
+[Ham]¿Puedes traerme una hamburguesa?[Ham,HamPed]:Diag
 
 [Diag]
+{HamPed}
 Ok...
-[][]:Fin
+[Ham]No lo creo...[]:Fin
+[]Ya...[]:Fin
 
 [Fin]
 Fin del juego

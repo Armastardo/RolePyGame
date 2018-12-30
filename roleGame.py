@@ -1,5 +1,6 @@
 import textParser
 import textwrap
+import re
 from gameClasses import Bandera, Habitacion, Opcion
 from os import system, name
 
@@ -14,6 +15,25 @@ def cumplenRequerimentos(banderas, opcion):
 		else:
 			return True
 	return False
+
+def procesarDialogo(dialogo, banderas):
+	cadena = dialogo
+	while(True):
+		try:
+			replace = re.search(r'\{(.*?)\}', cadena).group()
+			if(replace[1] == '-'):
+				if(banderas[replace[2:-1]].estado):
+					cadena = cadena.replace(replace, "")
+				else:
+					cadena = cadena.replace(replace, banderas[replace[2:-1]].apagada)				
+			else:
+				if(banderas[replace[1:-1]].estado):
+					cadena = cadena.replace(replace, banderas[replace[1:-1]].encendida)
+				else:
+					cadena = cadena.replace(replace, "")
+		except AttributeError:
+			break
+	return cadena
 
 def leerOpcion():
 	try:
@@ -37,9 +57,9 @@ def jugar(ruta):
 		w = textwrap.TextWrapper(replace_whitespace=False)
 
 		while True:
+
 			print("="*30)
-			print(w.fill(habActual.dialogo))
-			#print(habActual.dialogo)
+			print(w.fill(procesarDialogo(habActual.dialogo, banderas)))
 
 			opc = 0
 			disponibles = []
@@ -64,7 +84,8 @@ def jugar(ruta):
 				print(decision.textoE+"\n")
 			
 			if decision.consecuencias:
-				banderas[decision.consecuencias].toggle()
+				for consec in decision.consecuencias.split(','):
+					banderas[consec].toggle()
 
 			if decision.destino == "Fin":
 				print("\n"+habitaciones[decision.destino].dialogo)
