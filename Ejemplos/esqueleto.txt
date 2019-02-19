@@ -1,0 +1,11 @@
+[Banderas]
+NombreBandera:TextoApagada_TextoEncendida_EstadoInicial
+NombreBandera:TextoApagada_TextoEncendida
+
+[Inicio]
+Diálogo
+[Requisitos]Diálogo de la opción[BanderasQueAfecta]:Desinto de la opción
+
+[Fin]
+Fin del juego
+[][]:
