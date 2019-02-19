@@ -33,8 +33,6 @@ Colgué el teléfono y me puse a ver al horizonte.
 Sígame entonces, ingeniero.
 []Al final del juego[]:Fin
 
-[Diag]
-
 [Fin]
 Fin del juego
 [][]:
